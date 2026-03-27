@@ -1,0 +1,19 @@
+npm install bcryptjs
+
+1. Hash password
+
+const bcrypt = require("bcryptjs");
+const password = "12345678";
+const hashedPassword = await bcrypt.hash(password, 10);
+console.log(hashedPassword);
+
+
+2. Compare password (Login)
+
+const isMatch = await bcrypt.compare("12345678", hashedPassword);
+
+if (isMatch) {
+  console.log("Login success ✅");
+} else {
+  console.log("Invalid password ❌");
+}
