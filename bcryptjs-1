@@ -1,3 +1,5 @@
+hashedpassword:
+
 const bcrypt = require("bcryptjs");
 
 const hashPassword = (password) => {
@@ -19,3 +21,11 @@ const hashPassword = (password) => {
 };
 
 module.exports = hashPassword;
+
+comparepassword:
+const bcrypt = require("bcryptjs");
+const compare Password = (password, hashed Password) => {
+return bcrypt.compare (password, hashed Password);
+};
+module.exports = compare Password;
+//it returns a boolean value
